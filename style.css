@@ -44,7 +44,29 @@ nav{
     padding: 10px;
     z-index:50 ;
 }
+
+.nav-menu{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-left: 100px;
+}
+
+.nav-items{
+    display: flex;
+ list-style: none;
+}
+.nav-items a{
+    text-decoration: none;
+    color: black;
+    font-size: 21px;
+    font-weight: 400;
+}
+.nav-items a:hover{
+    color: #fcb249;
+}
 .bar-icon{
+    display: none;
     font-size: 32px;
 }
 
@@ -195,6 +217,39 @@ nav{
 }
   /* ===== MEDIA QUERY =====*/
 @media (max-width:786px) {
+
+    .bar-icon{
+        display: block;
+        cursor: pointer;
+    }
+    /* .bar-icon.active {
+        opacity: 0;
+    }
+    .bar-icon.active {
+       transition: translateY(8px);
+    } */
+    .nav-menu{
+        position: fixed;
+        right: -100%;
+        top: 70px;
+        gap:0;
+        flex-direction: column;
+        background-color: gray;
+       opacity: .9;
+        width:35% ;
+        text-align: center;
+        transition: 0.3s ;
+    }
+
+    .nav-items{
+        /* margin: 40px 0; */
+        padding: 0 20%;
+    }
+    
+    .nav-menu.active{
+        right: 0;
+    }
+
     .hero{
         flex-direction: column;
     }
