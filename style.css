@@ -234,9 +234,11 @@ nav{
         top: 70px;
         gap:0;
         flex-direction: column;
-        background-color: gray;
+        background-color: rgb(210, 208, 208);
+        z-index:10 ;
        opacity: .9;
         width:35% ;
+         box-shadow: 5px 5px 5px rgba(127, 123, 123,0.5);
         text-align: center;
         transition: 0.3s ;
     }
